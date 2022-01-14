@@ -68,7 +68,7 @@ const reviews = [
     {name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and wonderful vegan options!"},
     {name: "Jack", rating: 3, feedback:"A little too hipster for my taste, but the burger was decent, if overpriced"},
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly recommend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." },
     {name: "Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."},
@@ -90,7 +90,7 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 //to change the value of a key
-//example : dog.eyecolor = "brown"
+//example : dog.eyeColor = "brown"
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 
@@ -106,6 +106,9 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
+
+
+
 //add an array, name , rating, feedback/review
 function addReview(array, name, rating, feedback){
   array.push({name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }) 
@@ -117,6 +120,10 @@ function addReview(array, name, rating, feedback){
 
 console.log("--TASK 5--", addReview(reviews));
 
+
+
+
+
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
 
@@ -125,13 +132,20 @@ Use the getReviewByIndex function below to do the following:
   2. Receive a number which is the desired index in the array
   3. The function should return the following string: "{name} gave the restaurant a {rating} star review, and their feedback was: {feedback}"
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
-*/
+
 
 //array, number at desired index
-function getReviewByIndex(/*Your code here*/) {
-  /*Your code here*/
+
+
+*/
+
+
+function getReviewByIndex(array, i) {
+  return`${array[i].name} gave the restaurant a ${array[i].rating} star review, and their feedback was: ${array[i].feedback}`;
+
 }
 
+console.log("--TASK 6--", getReviewByIndex(reviews, 0));
 
   
 
@@ -149,9 +163,11 @@ Use the getLastReview function below to do the following:
 //an array as parameter
 //return last item with array.length -1
 
-function getLastReview(/*Your code here*/) {
-  /*Your code here*/
+function getLastReview(array) {
+  return `${array[array.length -1].name} gave the restaurant a ${array[array.length -1].rating} star review, and their feedback was: ${array[array.length -1].feedback}`;
 } 
+
+console.log("--TASK 7--", getLastReview(reviews));
 
 
 
@@ -166,7 +182,7 @@ Use the getReviewsByRating function below to do the following:
   For example: getReviewByRating(reviews, 4) would return these reviews in the 4 range (4-4.9):
   [
     {name: "Miranda", rating: 4, feedback:"fun trivia and cool vibes"},
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly recommend."},
     {name:"Lauren", rating: 4, feedback: "Absolutely love that they have karaoke Fridays! Food and drink selection is okay."}
   ]
 */
@@ -183,7 +199,7 @@ Use the getLongReviews function below to do the following:
 
   For example: getLongReviews(reviews) would return:
   [
-    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly reccomend."},
+    {name: "Wen", rating: 4.5, feedback:"I don't leave my house often, but when I do, it's for this place. Highly recommend."},
     {name: "Brett", rating: 3, feedback: "great selection of snacks and a nice cafe area to get work done during the day."},
     {name: "Julius", rating: 2, feedback: "I was largely unimpressed by this venue. Nothing special on the menu and too expensive. The atmosphere is polarizing, and not for me, but I think some would like it." }
   ]
@@ -212,10 +228,10 @@ Use the carMaker function below to do the following:
 */
 
 
-function carMaker(/* code here */) {
+//function carMaker(/* code here */) {
     /* code here */
     
-}
+//}
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
