@@ -119,7 +119,7 @@ function addReview(array, name, rating, feedback){
   //follow examples from this morning of pushing items into array
 }
 
-console.log("--TASK 5--", addReview(reviews));
+console.log("--TASK 5--", addReview(reviews, "Kim", 5, "awesome"));
 
 
 
@@ -147,6 +147,7 @@ function getReviewByIndex(array, i) {
 }
 
 console.log("--TASK 6--", getReviewByIndex(reviews, 0));
+console.log(reviews);
 
   
 
