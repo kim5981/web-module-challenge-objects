@@ -15,9 +15,11 @@ The function should:
   Example createMenuItem('tacos', 8, 'Lunch') should return {name: 'tacos', price: 8, category: 'Lunch'}
 */
 
-function createMenuItem(/*Your code here*/){
-    /*Your code here*/
+function createMenuItem(name, price, category){
+    return {name, price, category};
 }
+
+console.log("--TASK 1A--", createMenuItem("tacos", 8, "Lunch"));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1b: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Invoke your function!
@@ -47,8 +49,17 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch", 
-  
-}
+  discount: function (customer) {
+    if (customer === "student" || customer === "teacher") {
+      return this.price - (this.price * .25);
+    } else if (customer === "public") {
+      return this.price - (this.price * .1);
+    }
+  }
+  }
+
+  console.log("--TASK 2--", burger.discount("public"));
+
 
 
 
@@ -66,9 +77,9 @@ const reviews = [
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Using the reviews array above:
-  1. log only Julius' feedback to the console - no function needed 
+  1. log only Julius' feedback to the console - no function needed  //not graded
 */
-
+console.log("--TASK 3--", reviews[5].feedback);
 
 
 
@@ -78,8 +89,12 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
   2. log the reviews array to the console to check your work
 */
 
+//to change the value of a key
+//example : dog.eyecolor = "brown"
 
+reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
 
+console.log("--TASK 4--", reviews[7])
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -91,9 +106,16 @@ Write a function that creates an object with name, rating, feedback, add the new
   4. should return the resulting array
 */
 
-function addReview(/*Your Code Here */){
-  /*Your Code Here */
+//add an array, name , rating, feedback/review
+function addReview(array, name, rating, feedback){
+  array.push({name: 'Daniela', rating: 5, review: 'Beautiful atmosphere and wonderful vegan options!' }) 
+  return array;
+
+  //should push those parameters into array
+  //follow examples from this morning of pushing items into array
 }
+
+console.log("--TASK 5--", addReview(reviews));
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
 Write a function to return a review based on the index of the review in the array.
@@ -105,7 +127,7 @@ Use the getReviewByIndex function below to do the following:
   For example: getReviewByIndex(reviews,0) would return: "Daniela gave the restaurant a 5 star review, and their feedback was: Beautiful atmosphere and wonderful vegan options!"
 */
 
-
+//array, number at desired index
 function getReviewByIndex(/*Your code here*/) {
   /*Your code here*/
 }
@@ -124,6 +146,8 @@ Use the getLastReview function below to do the following:
   For example: getLastReview(reviews) would return: "Reyna gave the restaurant a 3.5 star review, and their feedback was: this place is chill with really cool people, great for getting work done on weekdays".
 */
 
+//an array as parameter
+//return last item with array.length -1
 
 function getLastReview(/*Your code here*/) {
   /*Your code here*/
